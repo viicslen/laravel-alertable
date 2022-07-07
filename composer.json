@@ -36,8 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ViicSlen\\LaravelAlertable\\": "src",
-            "ViicSlen\\LaravelAlertable\\Database\\Factories\\": "database/factories"
+            "ViicSlen\\LaravelAlertable\\": "src"
         }
     },
     "autoload-dev": {
@@ -63,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AlertableServiceProvider"
+                "ViicSlen\\LaravelAlertable\\AlertableServiceProvider"
             ],
             "aliases": {
-                "LaravelAlertable": "Alertable"
+                "Alertable": "Alertable"
             }
         }
     },
