@@ -11,7 +11,9 @@ return new class extends Migration
 
     public function __construct()
     {
-        $this->table = config('alertable.database.table', 'alerts');
+        $table = config('alertable.database.table', 'alerts');
+
+        $this->table = $table ?? 'alerts';
     }
 
     public function up()
@@ -24,7 +26,7 @@ return new class extends Migration
 
             $table->string('message');
             $table->json('data')->nullable();
-            $table->enum('severity', Severity::values())->default(Severity::Info);
+            $table->enum('severity', Severity::values())->default(Severity::Info->value);
 
             $table->timestamps();
         });

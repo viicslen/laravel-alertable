@@ -26,7 +26,11 @@ class Alert extends Model
      */
     public function getConnectionName(): string|null
     {
-        return config('alertable.database.connection', parent::getConnectionName());
+        if ($connection = config('alertable.database.connection')) {
+            return $connection;
+        }
+
+        return parent::getConnectionName();
     }
 
     /**
@@ -36,7 +40,11 @@ class Alert extends Model
      */
     public function getTable(): string
     {
-        return config('alertable.database.table', parent::getTable());
+        if ($table = config('alertable.database.table')) {
+            return $table;
+        }
+
+        return parent::getTable();
     }
 
     /**
