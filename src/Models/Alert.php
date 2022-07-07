@@ -20,6 +20,17 @@ class Alert extends Model
     ];
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<string>
+     */
+    protected $fillable = [
+        'message',
+        'data',
+        'severity',
+    ];
+
+    /**
      * Get the current connection name for the model.
      *
      * @return string|null
