@@ -20,7 +20,7 @@ interface Alertable
      * Record provided alert(s) in the database and associate it with the parent model.
      *
      * @param  string  $message
-     * @param  mixed  $data
+     * @param  array|null  $data
      * @param  \ViicSlen\LaravelAlertable\Enums\Severity  $severity
      * @param  string|null  $category
      * @return \ViicSlen\LaravelAlertable\Models\Alert|\Illuminate\Database\Eloquent\Model
