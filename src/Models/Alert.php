@@ -7,6 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use ViicSlen\LaravelAlertable\Enums\Severity;
 
+/**
+ * ViicSlen\LaravelAlertable\Models\Alert
+ *
+ * @property int $id
+ * @property int|null $alertable_id
+ * @property string|null $alertable_type
+ * @property string $message
+ * @property array|null $data
+ * @property \ViicSlen\LaravelAlertable\Enums\Severity $severity
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Builder $alertable
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereAlertableId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereAlertableType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereData($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereMessage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereSeverity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ViicSlen\LaravelAlertable\Models\Alert whereUpdatedAt($value)
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class Alert extends Model
 {
     /**

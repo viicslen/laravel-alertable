@@ -65,7 +65,7 @@
                 "ViicSlen\\LaravelAlertable\\AlertableServiceProvider"
             ],
             "aliases": {
-                "Alertable": "Alertable"
+                "Alert": "ViicSlen\\LaravelAlertable\\Facades\\Alert"
             }
         }
     },

@@ -14,4 +14,9 @@ class AlertableServiceProvider extends PackageServiceProvider
             ->hasMigration('create_alerts_table')
             ->hasConfigFile();
     }
+
+    public function packageRegistered()
+    {
+        app()->bind('alertable', Alert::class);
+    }
 }
