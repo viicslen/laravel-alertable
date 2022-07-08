@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('message');
             $table->json('data')->nullable();
             $table->enum('severity', Severity::values())->default(Severity::Info->value);
+            $table->string('category')->nullable();
 
             $table->timestamps();
         });

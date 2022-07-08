@@ -22,7 +22,8 @@ interface Alertable
      * @param  string  $message
      * @param  mixed  $data
      * @param  \ViicSlen\LaravelAlertable\Enums\Severity  $severity
+     * @param  string|null  $category
      * @return \ViicSlen\LaravelAlertable\Models\Alert|\Illuminate\Database\Eloquent\Model
      */
-    public function newAlert(string $message, ?array $data = null, Severity $severity = Severity::Info): Alert|Model;
+    public function newAlert(string $message, ?array $data = null, Severity $severity = Severity::Info, ?string $category = null): Alert|Model;
 }

@@ -31,6 +31,25 @@ class Alert extends Model
     ];
 
     /**
+     * Create a new model instance.
+     *
+     * @param  string  $message
+     * @param  array|null  $data
+     * @param  \ViicSlen\LaravelAlertable\Enums\Severity  $severity
+     * @param  string|null  $category
+     * @return static
+     */
+    public static function create(string $message, ?array $data = null, Severity $severity = Severity::Info, ?string $category = null): static
+    {
+        return new static([
+            'message' => $message,
+            'data' => $data,
+            'severity' => $severity,
+            'category' => $category,
+        ]);
+    }
+
+    /**
      * Get the current connection name for the model.
      *
      * @return string|null

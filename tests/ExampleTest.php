@@ -1,5 +1,8 @@
 <?php
 
+use ViicSlen\LaravelAlertable\Models\Alert;
+
 it('can test', function () {
-    expect(true)->toBeTrue();
+    $alert = Alert::create(message: 'Test');
+    expect($alert->message)->toBe('Test');
 });
