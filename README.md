@@ -100,6 +100,19 @@ $user->errorAlerts()->get();
 $user->latestAlert
 ```
 
+### Delete alerts:
+```php
+use ViicSlen\LaravelAlertable\Enums\Severity;
+
+// ...
+
+// Delete all alerts
+$user->clearAlerts()
+
+// Delete alerts with a specific severity
+$user->clearAlerts(Severity::Success)
+```
+
 ## Testing
 
 ```bash
