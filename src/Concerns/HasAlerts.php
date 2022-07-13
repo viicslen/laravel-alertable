@@ -93,12 +93,14 @@ trait HasAlerts
      * Delete all alerts or alerts with the provided severity from the model.
      *
      * @param  \ViicSlen\LaravelAlertable\Enums\Severity|null  $severity
+     * @param  string|null  $category
      * @return void
      */
-    public function clearAlerts(?Severity $severity = null): void
+    public function clearAlerts(?Severity $severity = null, string $category = null): void
     {
         $this->alerts()
             ->when($severity)->where('severity', $severity->value)
+            ->when($category)->where('category', $category)
             ->delete();
     }
 }

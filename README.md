@@ -111,6 +111,9 @@ $user->clearAlerts()
 
 // Delete alerts with a specific severity
 $user->clearAlerts(Severity::Success)
+
+// Delete alerts with a specific severity and category
+$user->clearAlerts(Severity::Success, 'CATEGORY_1')
 ```
 
 ## Testing
