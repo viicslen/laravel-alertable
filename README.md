@@ -1,11 +1,11 @@
-# This is my package laravel-alertable
+# Laravel Alertable
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/viicslen/laravel-alertable.svg?style=flat-square)](https://packagist.org/packages/viicslen/laravel-alertable)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/viicslen/laravel-alertable/run-tests?label=tests)](https://github.com/viicslen/laravel-alertable/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/viicslen/laravel-alertable/Check%20&%20fix%20styling?label=code%20style)](https://github.com/viicslen/laravel-alertable/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/viicslen/laravel-alertable.svg?style=flat-square)](https://packagist.org/packages/viicslen/laravel-alertable)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This is a simple package to add alerts to your laravel models.
 
 ## Installation
 
