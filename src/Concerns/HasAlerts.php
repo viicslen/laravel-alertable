@@ -99,8 +99,8 @@ trait HasAlerts
     public function clearAlerts(?Severity $severity = null, string $category = null): void
     {
         $this->alerts()
-            ->when($severity)->where('severity', $severity->value)
-            ->when($category)->where('category', $category)
+            ->when($severity, fn (MorphMany $query) => $query->where('severity', $severity?->value))
+            ->when($category, fn (MorphMany $query) => $query->where('category', $category))
             ->delete();
     }
 }
