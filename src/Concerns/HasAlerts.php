@@ -2,6 +2,7 @@
 
 namespace ViicSlen\LaravelAlertable\Concerns;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
@@ -99,8 +100,8 @@ trait HasAlerts
     public function clearAlerts(?Severity $severity = null, string $category = null): void
     {
         $this->alerts()
-            ->when($severity, fn (MorphMany $query) => $query->where('severity', $severity?->value))
-            ->when($category, fn (MorphMany $query) => $query->where('category', $category))
+            ->when($severity, fn (Builder $query) => $query->where('severity', $severity?->value))
+            ->when($category, fn (Builder $query) => $query->where('category', $category))
             ->delete();
     }
 }
