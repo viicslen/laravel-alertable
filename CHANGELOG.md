@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-alertable` will be documented in this file.
 
+## v0.1.3 - 2022-07-14
+
+**Full Changelog**: https://github.com/viicslen/laravel-alertable/compare/v0.1.2...v0.1.3
+
 ## v0.1.2 - 2022-07-14
 
 **Full Changelog**: https://github.com/viicslen/laravel-alertable/compare/v0.1.1...v0.1.2
